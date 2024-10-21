@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic HTML Creation</title>
+    
+    <style>
+        /* Internal CSS styles */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+
+    <script>
+        // Function to dynamically create content
+        function createDynamicContent() {
+            // Create a header element
+            const header = document.createElement('h1');
+            header.textContent = 'Welcome to the Dynamic HTML Page';
+            document.body.appendChild(header);
+
+            // Create a paragraph element
+            const paragraph = document.createElement('p');
+            paragraph.textContent = 'This content was generated dynamically using JavaScript.';
+            document.body.appendChild(paragraph);
+
+            // Create a button
+            const button = document.createElement('button');
+            button.textContent = 'Click Me!';
+            button.onclick = function() {
+                alert('Button was clicked!');
+            };
+            document.body.appendChild(button);
+        }
+
+        // Call the function to build content on page load
+        window.onload = createDynamicContent;
+    </script>
+</head>
+<body>
+    <!-- The dynamic content will be added here -->
+</body>
+</html>
